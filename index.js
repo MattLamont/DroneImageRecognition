@@ -3,27 +3,26 @@ var math = require('mathjs');
 
 module.exports = {
     checkForCommand: function( image_path ){
-        var random_num = math.random( 1 , 4 );
-        var floor_num = math.floor( random_num );
+        var random_num = math.randomInt( 1 , 5 );
 
-        if( floor_num == 1 ){
+        if( random_num == 1 ){
+            return String("no_command");
+        }
+
+        else if( random_num == 2 ){
             return String("command1");
         }
 
-        else if( floor_num == 2 ){
+        else if( random_num == 3 ){
             return String("command2");
         }
 
-        else if( floor_num == 3 ){
-            return String("command2");
-        }
-
-        else if( floor_num == 4 ){
-            return String("command4");
+        else if( random_num == 4 ){
+            return String("command3");
         }
 
         else{
-            return String("command1");
+            return String("no_command");
         }
     }
 };
