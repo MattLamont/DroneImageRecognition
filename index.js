@@ -1,8 +1,8 @@
 
-
+var math = require('mathjs');
 
 module.exports = {
     checkForCommand: function( image_path ){
-        return String( "command found" );
+        return math.random( 1 , 4 );
     }
 };
