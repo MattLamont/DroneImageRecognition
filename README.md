@@ -8,11 +8,13 @@
 5. This a math module used for random number generation.
 
 ##Usage Example
-`var DroneImageRecognition = require( 'DroneImageRecognition' );`
-` `
-`var img_path = "res/sample_image";`
-`var command = DroneImageRecognition.checkForCommand( img_path );`
-`console.log( command );`
+```
+var DroneImageRecognition = require( 'DroneImageRecognition' );
+
+var img_path = "res/sample_image.jpg";
+var command = DroneImageRecognition.checkForCommand( img_path );
+console.log( command );
+```
 
 ##Explanation
 1. First we import the module and call it "DroneImageRecognition"
