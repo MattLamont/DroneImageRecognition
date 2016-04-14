@@ -31,31 +31,31 @@ module.exports = {
 
         var process_string = './ShapeDetect ';
         process_string += image_path;
-        
+
         exec( process_string , function exec_callback( error , stdout , stderr ){
 
             if( error ){
-                return error;
+                callback( error );
             }
 
             if( stderr.indexOf( 'no_command' ) > -1 ){
-                return 'no_command';
+                callback( 'no_command' );
             }
 
             else if( stderr.indexOf( 'command1' ) > -1 ){
-                return 'command1';
+                callback( 'command1' );
             }
 
             else if( stderr.indexOf( 'command2' ) > -1 ){
-                return 'command2';
+                callback( 'command2' );
             }
 
             else if( stderr.indexOf( 'command3' ) > -1 ){
-                return 'command3';
+                callback( 'command3' );
             }
 
             else{
-                return 'no_command';
+                callback( 'no_command' );
             }
         });
     }
